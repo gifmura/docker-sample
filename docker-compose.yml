@@ -1,8 +1,27 @@
-version: '3'
+version: '3.3'
 services:
-  mysql:
-    build: ./mysql/
+  db:
+    image: mysql:8
     volumes:
-    - ./mysql/db:/docker-entrypoint-initdb.d
+    - ./mysql/init:/docker-entrypoint-initdb.d
     environment:
-    - MYSQL_ROOT_PASSWORD=changeme
+      MYSQL_ROOT_PASSWORD: changeme
+    ports:
+    - "3306:3306"
+    container_name: db
+    networks:
+    - app-network
+  app:
+    depends_on:
+    - db
+    image: gufuu/media-sample-scala:latest
+    ports:
+    - "9000:9000"
+    container_name: app
+    restart: unless-stopped
+    networks:
+    - app-network
+
+networks:
+  app-network:
+    driver: bridge
