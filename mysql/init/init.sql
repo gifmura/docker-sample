@@ -1,7 +1,3 @@
-CREATE USER 'sampleuser'@'localhost' IDENTIFIED by 'changeme';
-GRANT ALL PRIVILEGES ON *.* TO 'sampleuser'@'localhost';
-
-CREATE DATABASE playdb;
 use playdb;
 
 CREATE TABLE IF NOT EXISTS account (

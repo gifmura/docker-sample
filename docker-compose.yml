@@ -6,6 +6,9 @@ services:
     - ./mysql/init:/docker-entrypoint-initdb.d
     environment:
       MYSQL_ROOT_PASSWORD: changeme
+      MYSQL_DATABASE: playdb
+      MYSQL_USER: sampleuser
+      MYSQL_PASSWORD: changeme
     ports:
     - "3306:3306"
     container_name: db
