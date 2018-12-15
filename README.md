@@ -6,7 +6,7 @@ And this is the application that dockerizing [`media-sample-scala`](https://gith
 
 ## Preface
 
-This application runs on MySQL and sbt application on their docker container.
+This application runs on MySQL and a sbt application on their docker container.
 
 ## Usage
 
