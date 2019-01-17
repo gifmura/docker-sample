@@ -1,6 +1,6 @@
 # docker-sample
 
-This is a sample application running across multiple Docker containers.
+This is a sample application running on a Docker container.
 
 And this is the application that dockerizing [`media-sample-scala`](https://github.com/gifmura/media-sample-scala) app.
 
