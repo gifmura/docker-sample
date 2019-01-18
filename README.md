@@ -10,7 +10,41 @@ This application runs on MySQL and a sbt application on their docker container.
 
 ## Usage
 
-You can start this app like below.
+First of all, You need to install Docker like below.
+
+* CentOS
+Reference: https://docs.docker.com/install/linux/docker-ce/centos/
+
+```bash
+sudo yum install -y yum-utils \
+    device-mapper-persistent-data \
+    lvm2
+```
+
+* Debian
+
+Reference: https://docs.docker.com/install/linux/docker-ce/debian/
+
+```bash
+sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg2 \
+    software-properties-common
+```
+
+*GUI installer is required for Mac or Windows.*
+
+* Mac
+
+Reference: https://docs.docker.com/docker-for-mac/install/
+
+* Windows
+
+Reference: https://docs.docker.com/docker-for-windows/install/
+
+After that, you can start this app like below.
 
 ```bash
 # Run within docker-sample directory.
@@ -25,3 +59,9 @@ And you can stop this app like below.
 # Run within docker-sample directory.
 docker-compose down -v
 ```
+
+## References
+
+* https://docs.docker.com/
+
+* https://github.com/docker/compose
