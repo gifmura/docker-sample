@@ -13,6 +13,7 @@ This application runs on MySQL and a sbt application on their docker container.
 First of all, You need to install Docker like below.
 
 * CentOS
+
 Reference: https://docs.docker.com/install/linux/docker-ce/centos/
 
 ```bash
